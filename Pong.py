@@ -7,7 +7,7 @@ pygame.init()
 fps = pygame.time.Clock()
 
 fenetre= pygame.display.set_mode((640, 480))
-pygame.display.set_caption("pypong")
+pygame.display.set_caption("PongV1.0")
 BLACK= (0,0,0)
 RED = (255,0,0)
 GREEN = (0,255,0)
@@ -49,6 +49,8 @@ score2 = -1
 
 music = pygame.mixer.Sound("D:/PyPong/PyPong/music.wav")
 music.play(-1)
+
+
 
 # helper function that spawns a ball, returns a position vector and a velocity vector
 # if right is True, spawn to the right, else spawn to the left
@@ -208,7 +210,7 @@ def paused():
     global pause
     font = pygame.font.SysFont('Calibri', 100, True, False)
     textpause = font.render('PAUSE', True, white)
-    fenetre.blit(textpause,[174,200])
+    fenetre.blit(textpause,[182,150])
     
 
     while pause:
